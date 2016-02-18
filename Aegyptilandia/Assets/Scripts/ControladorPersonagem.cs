@@ -77,12 +77,16 @@ public class ControladorPersonagem : MonoBehaviour
 			float z = PlayerPrefs.GetFloat("Z");
 			transform.position = new Vector3(x,y,z);
 
+
+
+		}
+		if (start >= 2) {
+		
 			//Pega as infos
 			Coins = PlayerPrefs.GetInt("Coins");
 			vida = PlayerPrefs.GetFloat("Vida");
 			veneno = PlayerPrefs.GetInt("Veneno");
 			aguaSanitaria = PlayerPrefs.GetInt("Agua");
-
 		}
 
         sintomas.Add("Febre");

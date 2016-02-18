@@ -39,7 +39,7 @@ public class ControladorPortao : MonoBehaviour {
             PlayerPrefs.SetFloat("Vida", Personagem.GetComponent<ControladorPersonagem>().vida);
             PlayerPrefs.SetInt("Veneno", Personagem.GetComponent<ControladorPersonagem>().veneno);
             PlayerPrefs.SetInt("Agua", Personagem.GetComponent<ControladorPersonagem>().aguaSanitaria);
-
+			PlayerPrefs.SetInt("start", 3);
             FadeControl.fadeOn(1);
             Invoke("carregacena", 1);
         }

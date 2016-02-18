@@ -11,3 +11,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Loja.unity
   - enabled: 1
     path: Assets/Scenes/UsinaEntrada.unity
+  - enabled: 1
+    path: Assets/Scenes/UsinaParte1.unity
