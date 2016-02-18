@@ -20,4 +20,8 @@ public class ControladorMenu : MonoBehaviour {
 		SceneManager.LoadScene ("Rua");
 		
 	}
+	public void sair()
+	{
+		Application.Quit ();
+	}
 }

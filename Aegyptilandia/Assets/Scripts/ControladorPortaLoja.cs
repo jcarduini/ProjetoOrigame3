@@ -15,7 +15,7 @@ public class ControladorPortaLoja : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (estaNaPorta && Input.GetKey (KeyCode.F)) {
+		if (estaNaPorta && Input.GetKey (KeyCode.E)) {
 			PlayerPrefs.SetInt("Coins", Personagem.GetComponent<ControladorPersonagem>().Coins);
 			PlayerPrefs.SetFloat("Vida", Personagem.GetComponent<ControladorPersonagem>().vida);
 			PlayerPrefs.SetInt("Veneno", Personagem.GetComponent<ControladorPersonagem>().veneno);
