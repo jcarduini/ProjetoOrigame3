@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class ControladorPersonagem : MonoBehaviour
 {
@@ -40,6 +41,14 @@ public class ControladorPersonagem : MonoBehaviour
 
     public GameObject ControladorAtaque;
 
+    //Sistomas
+
+    private ArrayList sintomas = new ArrayList();
+    private int sintoma;
+    private float tempoDoenca;
+
+    public Text tSintomas;
+
     #endregion Atributos e propriedades
 
     #region Métodos
@@ -73,6 +82,16 @@ public class ControladorPersonagem : MonoBehaviour
 			aguaSanitaria = PlayerPrefs.GetInt("Agua");
 
 		}
+
+        sintomas.Add("Febre");
+        sintomas.Add("Artralgia (Dores nas articulações)");
+        sintomas.Add("Rash Cutâneo (manchas vermelhas na pele)");
+        sintomas.Add("Prurido (Coceira)");
+        sintomas.Add("Vermelhidão nos olhos");
+
+        tempoDoenca = Time.time;
+
+        tSintomas.text = "";
 	}
 
     // Update is called once per frame
@@ -167,6 +186,20 @@ public class ControladorPersonagem : MonoBehaviour
         if(vida <= 0)
         {
             Debug.Log("Morreu!");
+        }
+
+        //Controle de doença
+
+        if (this.vida >= 100)
+        {
+            tSintomas.text = "";
+        }
+        else if(tempoDoenca - Time.time > 5)
+        {
+            sintoma = Random.Range(0, sintomas.Count);
+            tempoDoenca = Time.time;
+
+            tSintomas.text = sintomas[sintoma].ToString();
         }
     }
 
