@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Personagem: {fileID: 0}
-  cena: loja
+  cena: UsinaParte1
 --- !u!61 &965929893
 BoxCollider2D:
   m_ObjectHideFlags: 0

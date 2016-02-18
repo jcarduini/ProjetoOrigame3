@@ -54,3 +54,6 @@ TagManager:
   - name: Personagem
     uniqueID: 3510834711
     locked: 0
+  - name: FrentePers
+    uniqueID: 2615011639
+    locked: 0

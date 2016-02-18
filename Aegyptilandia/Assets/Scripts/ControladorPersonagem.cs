@@ -91,7 +91,7 @@ public class ControladorPersonagem : MonoBehaviour
 
         tempoDoenca = Time.time;
 
-        tSintomas.text = "";
+        //stSintomas.text = "";
 	}
 
     // Update is called once per frame
@@ -200,7 +200,7 @@ public class ControladorPersonagem : MonoBehaviour
             sintoma = Random.Range(0, sintomas.Count - 1);
             tempoDoenca = Time.time;
 
-            tSintomas.text = sintomas[sintoma].ToString();
+            //tSintomas.text = sintomas[sintoma].ToString();
         }
     }
 
