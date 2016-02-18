@@ -67,7 +67,7 @@ public class ControladorPersonagem : MonoBehaviour
 
 		int start = PlayerPrefs.GetInt("start");
 
-		if(start != 1) //Player voltando da Loja
+		if(start == 2) //Player voltando da Loja
 		{
 			//Pega posicao salva no playerPrefs
 			float x = PlayerPrefs.GetFloat("X");
@@ -91,7 +91,7 @@ public class ControladorPersonagem : MonoBehaviour
 
         tempoDoenca = Time.time;
 
-        tSintomas.text = "";
+        //tSintomas.text = "";
 	}
 
     // Update is called once per frame
@@ -192,7 +192,7 @@ public class ControladorPersonagem : MonoBehaviour
 
         if (this.vida >= 100)
         {
-            tSintomas.text = "";
+          //  tSintomas.text = "";
         }
         else if(tempoDoenca - Time.time > 5)
         {
