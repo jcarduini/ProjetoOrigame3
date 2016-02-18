@@ -55,7 +55,25 @@ public class ControladorPersonagem : MonoBehaviour
         veneno = 0;
         aguaSanitaria = 0;
         areia = false;
-    }
+
+		int start = PlayerPrefs.GetInt("start");
+
+		if(start != 1) //Player voltando da Loja
+		{
+			//Pega posicao salva no playerPrefs
+			float x = PlayerPrefs.GetFloat("X");
+			float y = PlayerPrefs.GetFloat ("Y");
+			float z = PlayerPrefs.GetFloat("Z");
+			transform.position = new Vector3(x,y,z);
+
+			//Pega as infos
+			Coins = PlayerPrefs.GetInt("Coins");
+			vida = PlayerPrefs.GetFloat("Vida");
+			veneno = PlayerPrefs.GetInt("Veneno");
+			aguaSanitaria = PlayerPrefs.GetInt("Agua");
+
+		}
+	}
 
     // Update is called once per frame
     void Update()

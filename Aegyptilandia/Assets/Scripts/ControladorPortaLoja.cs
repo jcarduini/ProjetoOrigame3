@@ -23,6 +23,7 @@ public class ControladorPortaLoja : MonoBehaviour {
 			PlayerPrefs.SetFloat("X", Personagem.transform.position.x);
 			PlayerPrefs.SetFloat("Y", Personagem.transform.position.y);
 			PlayerPrefs.SetFloat("Z", Personagem.transform.position.z);
+			PlayerPrefs.SetInt("start", 2);
 			SceneManager.LoadScene ("Loja");
 		}
 	
