@@ -48,6 +48,8 @@ public class ControladorPersonagem : MonoBehaviour
     private float tempoDoenca;
 
     public Text tSintomas;
+	public Text tMoedas;
+	public Text tVida;
 
     #endregion Atributos e propriedades
 
@@ -97,7 +99,8 @@ public class ControladorPersonagem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+		tVida.text = vida.ToString ();
+		tMoedas.text = Coins.ToString ();
         //Controla o movimento de andar do personagem
 
         Anim.SetBool("walk", andar);
