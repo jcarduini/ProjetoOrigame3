@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ControladorLoja : MonoBehaviour {
 
@@ -50,10 +51,10 @@ public class ControladorLoja : MonoBehaviour {
 	}
 	void salvaPlayer() //Salva todas as compras
 	{
-		/*PlayerPrefs.SetInt("Coins",moedas);
+		PlayerPrefs.SetInt("Coins",moedas);
 		PlayerPrefs.SetFloat("Vida",vida);
 		PlayerPrefs.SetInt("Veneno",veneno);
-		PlayerPrefs.SetInt("Agua",aguaSanitaria);*/
+		PlayerPrefs.SetInt("Agua",aguaSanitaria);
 	}
 	public void compraVida ()
 	{
@@ -69,7 +70,7 @@ public class ControladorLoja : MonoBehaviour {
 			moedas -= precoVida;
 
 			refreshTela ();
-			salvaPlayer ();
+			//salvaPlayer ();
 		} 
 		else //player nao tem moedas
 		{
@@ -91,7 +92,7 @@ public class ControladorLoja : MonoBehaviour {
 			moedas -= precoVeneno;
 
 			refreshTela ();
-			salvaPlayer ();
+			//salvaPlayer ();
 		} 
 		else //player nao tem moedas
 		{
@@ -113,11 +114,17 @@ public class ControladorLoja : MonoBehaviour {
 			moedas -= precoAgua;
 
 			refreshTela ();
-			salvaPlayer ();
+			//salvaPlayer ();
 		} 
 		else //player nao tem moedas
 		{
 			tAviso.text = "Você não tem moedas suficientes!";
 		}
 	}
+	public void Sair(){
+		salvaPlayer ();
+		SceneManager.LoadScene ("Rua");
+	}
+
+
 }
